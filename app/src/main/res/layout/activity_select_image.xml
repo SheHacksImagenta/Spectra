@@ -25,24 +25,16 @@ android:orientation="vertical"
         android:layout_above="@+id/button_take_a_photo"
         android:layout_gravity="center" />
 
-    <Button
-        android:id="@+id/button_take_a_photo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Take Photo"
-        android:layout_alignParentBottom="true"
-        android:onClick="takePhoto"/>
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="13dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp"
         android:text="Selfie Emotion Processor"
         android:textColor="@android:color/white"
-        android:textSize="34sp"
-        android:layout_centerHorizontal="true"/>
+        android:textSize="34sp" />
 
     <!--style="@style/ButtonStyle" />-->
 
@@ -54,13 +46,24 @@ android:orientation="vertical"
 
     <Button
         android:id="@+id/button_select_a_photo_in_album"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select Image"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:onClick="selectImageInAlbum"/>
-        <!--style="@style/ButtonStyle" />-->
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button_take_a_photo"
+        android:onClick="selectImageInAlbum"
+        android:text="Select Image" />
+
+    <Button
+        android:id="@+id/button_take_a_photo"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:onClick="takePhoto"
+        android:text="Take Photo" />
+    <!--style="@style/ButtonStyle" />-->
 
 </RelativeLayout>
 
