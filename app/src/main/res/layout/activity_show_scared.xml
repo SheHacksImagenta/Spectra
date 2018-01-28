@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context="com.example.shalini.spectra.ShowScaredActivity">
 
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:text="Start Game"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="348dp" />
+
     <LinearLayout
         android:layout_gravity="center_horizontal|center_vertical"
         android:layout_margin="16dp"
@@ -25,11 +33,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
-        android:text="You’re brave and strong! To talk anonymously to a friend, call this number: 800-233-4357"
-        android:textColor="@color/colorPrimary"
+        android:text="You’re brave and strong!"
         android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="27dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To speak anonymously with a friend, call this number: 800-233-4357"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="235dp" />
 
 </android.support.constraint.ConstraintLayout>

@@ -23,12 +23,32 @@ android:layout_height="wrap_content"></LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="112dp"
         android:text="Have a virtual hug! Better times are coming your way."
-        android:textColor="@color/colorPrimary"
         android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Get some fresh air or confide in a trusted friend or family member. You're never alone."
+        android:textAlignment="gravity"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:text="Start Game"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="361dp" />
 
 </android.support.constraint.ConstraintLayout>
