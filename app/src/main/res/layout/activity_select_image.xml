@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingLeft="10dp"
+android:paddingRight="10dp"
+android:paddingTop="10dp"
+android:paddingBottom="10dp"
+android:baselineAligned="false"
+android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context="com.example.shalini.spectra.SelectImageActivity">
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_weight="2">
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/button_take_a_photo"
+        android:layout_gravity="center" />
+
+    <Button
+        android:id="@+id/button_take_a_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take Photo"
+        android:layout_alignParentBottom="true"
+        android:onClick="takePhoto"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="13dp"
+        android:text="Selfie Emotion Processor"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:layout_centerHorizontal="true"/>
+
+    <!--style="@style/ButtonStyle" />-->
+
+</RelativeLayout>
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+    <Button
+        android:id="@+id/button_select_a_photo_in_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Image"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="selectImageInAlbum"/>
+        <!--style="@style/ButtonStyle" />-->
+
+</RelativeLayout>
+
+</LinearLayout>

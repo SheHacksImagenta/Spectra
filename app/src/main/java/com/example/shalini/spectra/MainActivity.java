@@ -2,18 +2,35 @@ package com.example.shalini.spectra;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.Image;
+import android.os.AsyncTask;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.microsoft.projectoxford.emotion.EmotionServiceClient;
+import com.microsoft.projectoxford.emotion.EmotionServiceRestClient;
+import com.microsoft.projectoxford.emotion.contract.RecognizeResult;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     GridLayout mainGrid;
+
+    public EmotionServiceClient emotionServiceClient = new EmotionServiceRestClient("e53f5abc2a534272a4544d2f65dddef9");
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,20 +47,46 @@ public class MainActivity extends AppCompatActivity {
             cardView.setOnClickListener(new View.OnClickListener(){
                public void onClick(View view){
                    //Toast.makeText(MainActivity.this, "Clicked at " + finalI, Toast.LENGTH_SHORT).show();
-                   Intent intent = new Intent(MainActivity.this, ShowHappyActivity.class);
-                   startActivity(intent);
+                   if (finalI == 0) { //happy
+                       Intent intent = new Intent(MainActivity.this, ShowHappyActivity.class);
+                       startActivity(intent);
+                   }
+                   if (finalI == 1){ //sad
+                       Intent intent = new Intent(MainActivity.this, ShowSadActivity.class);
+                       startActivity(intent);
+                   }
+                   if (finalI == 2){ //angry
+                       Intent intent = new Intent(MainActivity.this, ShowAngryActivity.class);
+                       startActivity(intent);
+                   }
+                   if (finalI == 3){ //scared
+                       Intent intent = new Intent(MainActivity.this, ShowScaredActivity.class);
+                       startActivity(intent);
+                   }
+                   if (finalI == 4) { //stressed
+                       Intent intent = new Intent(MainActivity.this, ShowStressedActivity.class);
+                       startActivity(intent);
+                   }
                }
             });
         }
     }
-
-    static final int REQUEST_IMAGE_CAPTURE = 1;
 
     public void dispatchTakePictureIntent(View view) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
+    }
+
+    public void imageActivityResponse(View view){ //from process button
+        Intent intent = new Intent(this, SelectImageActivity.class);
+        startActivity(intent);
+    }
+
+    public void recognitionActivity(View view){ //from process button
+        Intent intent = new Intent(this, RecognizeActivity.class);
+        startActivity(intent);
     }
 
 //    @Override
@@ -61,9 +104,6 @@ public class MainActivity extends AppCompatActivity {
 //        startActivity(intent);
 //    }
 //
-//    public void submitLogin(View view){
-//        Intent intent = new Intent(this, LoggedActivity.class);
-//        startActivity(intent);
 //    }
 
 }

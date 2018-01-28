@@ -2,9 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.shalini.spectra">
 
-    <uses-feature android:name="android.hardware.camera"
-        android:required="false" /> //camera not required to function
-
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    //camera not required to function
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -22,7 +23,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".ShowHappyActivity" />
-        <activity android:name=".LoggedActivity"></activity>
+        <activity android:name=".RecognizeActivity" />
+        <activity android:name=".SelectImageActivity" />
+        <activity android:name=".ShowSadActivity" />
+        <activity android:name=".ShowAngryActivity" />
+        <activity android:name=".ShowStressedActivity" />
+        <activity android:name=".ShowScaredActivity"></activity>
     </application>
 
 </manifest>
