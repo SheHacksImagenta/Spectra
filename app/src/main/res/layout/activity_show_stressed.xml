@@ -13,15 +13,32 @@
         android:src="@drawable/stressed"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:text="Start Game"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="348dp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
-        android:text="Breathe in… breathe out… you can do it!"
-        android:textColor="@color/colorPrimary"
+        android:text="Remember...take baby steps!"
         android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You can do it!"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="263dp" />
 
 </android.support.constraint.ConstraintLayout>

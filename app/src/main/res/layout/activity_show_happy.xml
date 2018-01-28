@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context="com.example.shalini.spectra.ShowHappyActivity">
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:text="Start Game"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="418dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="564dp"
@@ -13,7 +21,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
@@ -35,11 +43,15 @@
                     android:text="    Great, keep it up!"
                     android:textSize="40sp" />
 
-                <Button
-                    android:id="@+id/button2"
+                <TextView
+                    android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Start Game" />
+                    android:gravity="center"
+                    android:textAlignment="gravity"
+                    android:text="Savor these moments, and hold them close to your heart."
+                    android:textSize="25sp" />
+
             </LinearLayout>
 
         </FrameLayout>
